@@ -30,8 +30,8 @@ canvas {
     position: absolute;
     background: #00000075;
     top: 10%;
-    left: 30%;
-    width: 50%;
+    left: 10%;
+    width: auto;
     color: #ededed;
     font-size: 14px;
     text-align: left;

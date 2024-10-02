@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container">
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Client ID</th>
+		<th>Host name</th>
+		<th>ip</th>
+		<th>Mac</th>
+		<th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+	{% for stud in student %}
+      <tr>
+        <td>{{stud.id}}</td>
+        <td>{{stud.host}}</td>
+        <td>{{stud.ip}}</td>
+		<td>{{stud.mac}}</td>
+		<td>{{stud.date}}</td>
+
+      </tr>
+	  {% endfor %}
+
+	</tbody>
+</table>
+</div>
+{% endif %}
+{% endblock %}

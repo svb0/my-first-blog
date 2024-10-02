@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Django CRUD Operations</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+{% if user.is_authenticated %}
+<div class="container">
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Client ID</th>
+		<th>Host name</th>
+		<th>ip</th>
+		<th>Mac</th>
+		<th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+	{% for stud in student %}
+      <tr>
+        <td>{{stud.id}}</td>
+        <td>{{stud.host}}</td>
+        <td>{{stud.ip}}</td>
+		<td>{{stud.mac}}</td>
+		<td>{{stud.date}}</td>
+
+      </tr>
+	  {% endfor %}
+
+	</tbody>
+</table>
+</div>
+{% endif %}
+</body>
+</html>
