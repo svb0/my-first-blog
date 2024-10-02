@@ -1,0 +1,54 @@
+{% load static %}
+<html lang="ru" >
+<head>
+  <meta charset="UTF-8">
+  <title>.:. Bartelsen Develop Studio </title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+  <!-- particles.js container -->
+<div id="particles-js"></div>
+<!-- stats - count particles -->
+ <div class="count-particles">
+  <span class="js-count-particles"></span>
+     Caro m'è 'l sonno, e più l'esser di sasso,
+mentre che 'l danno e la vergogna dura;
+non veder, non sentir m'è gran ventura;
+però non mi destar, deh, parla basso.
+Rime,
+     <br>
+     Summa ităque divisio de jure personārum haec est, quod omnes homĭnes aut libĕri sunt aut servi.
+     Et libertas quidem est, ex qua etiam libĕri vocantur, naturālis facultas ejus, quod cuīque facĕre libet,
+     nisi si quid aut vi aut jure prohibētur. Servĭtus autem est constitutio juris gentium,
+     qua quis dominio aliēno contra natūram subicĭtur. Servi autem ex eo appellāti sunt,
+     quod imperatōres captīvos vendĕre jubent ac per hoc servāre nес occidĕre solent:
+     qui etiam mancipia dicti sunt, quod ab hostĭbus manu capiuntur. Servi autem aut nascuntur aut fiunt.
+     Nascuntur ex ancillis nostris; fiunt aut jure gentium, id est ex captivitāte, aut jure civīli, velŭti,
+     cum homo liber major viginti annis ad pretium participandum sese venumdāri passus est.
+     In servōrum condiciōne nulla differentia est.
+     In libĕris multae differentiae sunt: aut enim ingenui sunt aut libertīni.
+</div>
+ <div class="count-particles" style="top:50%;">
+     <span class="js-count-particles"></span>
+<div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+{% for post in posts %}
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+</div>
+<!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
+  <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+<script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+
+  
+    <script  src="{% static 'js/index.js' %}"></script>
+
+
+
+{% endfor %}
+</body>
+
+</html>
